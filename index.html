@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,19 +99,14 @@
       width: 100%;
       height: 800px; /* Increased height to show more content */
       border: none;
+      z-index: 25;
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div id="loading-screen" class="fixed inset-0 bg-black z-50 flex items-center justify-center"> <!-- Changed background to black -->
-    <div class="flex items-center">
-      <img src="CTF_Logo.png" alt="ctf_logo" class="w-40 h-40 mr-4">
-      <div class="text-white text-4xl">Loading...</div> <!-- Increased font size -->
-    </div>
-  </div>
   <div class="spotlight" id="spotlight"></div>
-  <div class="flex items-center justify-center h-screen fade-up">
+  <div class="flex items-center justify-center h-screen fade-up show">
     <div class="relative isolate overflow-hidden w-full h-full">
       <iframe src='https://my.spline.design/rocket-9ed3b676dbf4b44cccc3039212e4ef2a/' frameborder='0' width='100%' height='100%'></iframe>
       <div id="container" class="absolute inset-0 flex flex-row bg-transparent z-10">
@@ -170,14 +165,14 @@
           <div id="team" class="bg-transparent py-24 sm:py-32">
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
               <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Craft The Future Team</h2> <!-- Increased font size -->
-                <p class="mt-6 text-xl leading-8 text-gray-600">Meet the leaders of our team: Carl, our CEO/CMO; Contessa, our Sustainability Director; and Tiara, our CMO/CTO. They are passionate about what they do and dedicated to delivering the best results for our clients.</p> <!-- Increased font size -->
+                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">Craft The Future Team</h2> <!-- Increased font size -->
+                <p class="mt-6 text-xl leading-8 text-white">Meet the leaders of our team: Carl, our CEO/CMO; Contessa, our Sustainability Director; and Tiara, our CMO/CTO. They are passionate about what they do and dedicated to delivering the best results for our clients.</p> <!-- Increased font size -->
               </div>
               <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 <li>
                   <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                  <h3 class="mt-6 text-xl font-semibold leading-8 tracking-tight text-gray-900">Carl</h3> <!-- Increased font size -->
-                  <p class="text-lg leading-7 text-gray-600">CEO/CMO</p> <!-- Increased font size -->
+                  <h3 class="mt-6 text-xl font-semibold leading-8 tracking-tight text-white">Carl</h3> <!-- Increased font size -->
+                  <p class="text-lg leading-7 text-white">CEO/CMO</p> <!-- Increased font size -->
                   <ul role="list" class="mt-6 flex gap-x-6">
                     <li>
                       <a href="#" class="text-gray-400 hover:text-gray-500">
@@ -199,8 +194,8 @@
                 </li>
                 <li>
                     <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-                    <h3 class="mt-6 text-xl font-semibold leading-8 tracking-tight text-gray-900">Contessa</h3> <!-- Increased font size -->
-                    <p class="text-lg leading-7 text-gray-600">Sustainability Director</p> <!-- Increased font size -->
+                    <h3 class="mt-6 text-xl font-semibold leading-8 tracking-tight text-white">Contessa</h3> <!-- Increased font size -->
+                    <p class="text-lg leading-7 text-white">Sustainability Director</p> <!-- Increased font size -->
                     <ul role="list" class="mt-6 flex gap-x-6">
                       <li>
                         <a href="#" class="text-gray-400 hover:text-gray-500">
@@ -221,9 +216,9 @@
                     </ul>
                   </li>
                   <li>
-                    <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://t9let.carrd.co/assets/images/image03.jpg?v=fc6b7ac5" alt="">
-                    <h3 class="mt-6 text-xl font-semibold leading-8 tracking-tight text-white-900">Tiara Nicole</h3> <!-- Increased font size -->
-                    <p class="text-lg leading-7 text-gray-600">CMO/CTO</p> <!-- Increased font size -->
+                    <img class="aspect-[3/2] w-full rounded-2xl object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                    <h3 class="mt-6 text-xl font-semibold leading-8 tracking-tight text-white">Lindsay Walton</h3> <!-- Increased font size -->
+                    <p class="text-lg leading-7 text-white">Front-end Developer</p> <!-- Increased font size -->
                     <ul role="list" class="mt-6 flex gap-x-6">
                       <li>
                         <a href="#" class="text-gray-400 hover:text-gray-500">
@@ -284,8 +279,8 @@
             </div>
           </section>
           <div id="blog" class="py-32 sm:py-48 lg:py-56 text-center text-white fade-up">
-            <h2 class="text-4xl font-bold">Our Stories</h2> <!-- Increased font size -->
-            <p class="mt-6 text-xl leading-8"></p> <!-- Increased font size -->
+            <h2 class="text-4xl font-bold">Blog Section</h2> <!-- Increased font size -->
+            <p class="mt-6 text-xl leading-8">Get in touch with us through this contact section.</p> <!-- Increased font size -->
             <iframe src="https://paragraph.xyz/@craftthefuture" class="blog-embed"></iframe>
           </div>
         </div>
