@@ -70,15 +70,40 @@
       display: none; /* Chrome, Safari, Opera */
     }
 
-    /* Custom Animation for Testimonials */
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
+   /* Custom Animation for Testimonials */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Scroll left by 50% of the container */
+}
 
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
+@keyframes scroll-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); } /* Scroll right by 50% of the container */
+}
+
+.animate-scroll-left {
+  animation: scroll-left 60s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 60s linear infinite;
+}
+/* Pause animation on hover or touch */
+.animate-scroll-left:hover,
+.animate-scroll-left:active,
+.animate-scroll-left:focus {
+  animation-play-state: paused;
+  cursor: grab;
+}
+
+.animate-scroll-right:hover,
+.animate-scroll-right:active,
+.animate-scroll-right:focus {
+  animation-play-state: paused;
+  cursor: grab;
+}
+
+
 
     /* Responsive adjustments for testimonials */
     @media (min-width: 640px) {
@@ -256,101 +281,197 @@
             <div class="mx-auto max-w-full px-6 lg:px-8">
               <h2 class="text-5xl sm:text-6xl font-bold tracking-tight text-white text-center font-bebas-neu">Testimonials</h2>
               <div class="mt-10 overflow-x-hidden">
-                <div class="flex space-x-8 animate-scroll w-[200%]">
-                  <!-- Testimonial 1 -->
-                  <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
-                    <figure class="flex flex-col justify-between h-full">
-                      <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>“I appreciate all that [Craft The Future] is doing for black and brown creators in the digital space.”</p>
-                      </blockquote>
-                      <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/sonia_erika.jpg" alt="Sonia Erika">
-                        <div class="text-base">
-                          <div class="font-semibold text-gray-900">Sonia Erika</div>
-                          <div class="mt-1 text-gray-500">CEO of Death As A Business</div>
-                        </div>
-                      </figcaption>
-                    </figure>
+                <div class="flex flex-col space-y-8">
+                  <!-- Row 1 -->
+                  <div class="flex space-x-8 animate-scroll-left w-[200%]">
+                    <!-- Original Testimonials -->
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“I appreciate all that [Craft The Future] is doing for black and brown creators in the digital space.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/serika.jpg" alt="Sonia Erika">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Sonia Erika</div>
+                            <div class="mt-1 text-gray-500">CEO of Death As A Business</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Every story is worth telling, there will always be someone that needs to hear your voice.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/tking.png" alt="Timothy King">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Timothy King</div>
+                            <div class="mt-1 text-gray-500">@timtk_</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Keep creating and lean in to your tribe of community supporters.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/dlewis.png" alt="Donna 'Renee' Lewis">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Donna "Renee" Lewis</div>
+                            <div class="mt-1 text-gray-500">Genisx Inc</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Duplicate Testimonials -->
+                    <!-- Testimonial 1 (Duplicate) -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“I appreciate all that [Craft The Future] is doing for black and brown creators in the digital space.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/serika.jpg" alt="Sonia Erika">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Sonia Erika</div>
+                            <div class="mt-1 text-gray-500">CEO of Death As A Business</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 2 (Duplicate) -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Every story is worth telling, there will always be someone that needs to hear your voice.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/tking.png" alt="Timothy King">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Timothy King</div>
+                            <div class="mt-1 text-gray-500">@timtk_</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 3 (Duplicate) -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Keep creating and lean in to your tribe of community supporters.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/dlewis.png" alt="Donna 'Renee' Lewis">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Donna "Renee" Lewis</div>
+                            <div class="mt-1 text-gray-500">Genisx Inc</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
                   </div>
-                  <!-- Testimonial 2 -->
-                  <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
-                    <figure class="flex flex-col justify-between h-full">
-                      <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>“Every story is worth telling, there will always be someone that needs to hear your voice.”</p>
-                      </blockquote>
-                      <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/timothy_king.jpg" alt="Timothy King">
-                        <div class="text-base">
-                          <div class="font-semibold text-gray-900">Timothy King</div>
-                          <div class="mt-1 text-gray-500">@timtk_</div>
-                        </div>
-                      </figcaption>
-                    </figure>
+                  <!-- Row 2 -->
+                  <div class="flex space-x-8 animate-scroll-right w-[200%]">
+                    <!-- Original Testimonials -->
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“It's incredibly refreshing to be surrounded by other individuals who are passionate about technology and shaping the future with their own hands.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/mkrisnov.jpg" alt="Michael Kirsanov">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Michael Kirsanov</div>
+                            <div class="mt-1 text-gray-500">lofilabs.xyz</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Having Craft the Future part of our major event was fantastic because people got to experience AI art for the first time.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/jjones.jpg" alt="Jamar Jones">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Jamar Jones</div>
+                            <div class="mt-1 text-gray-500">Foureva Media</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Being in a creative mindset can get rough - even when we love it. Having a sense of community saves your sanity.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/mlyle.jpg" alt="Mitchelle Lyle">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Mitchelle Lyle</div>
+                            <div class="mt-1 text-gray-500">Hydroponics STEM Program</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Duplicate Testimonials -->
+                    <!-- Testimonial 4 (Duplicate) -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“It's incredibly refreshing to be surrounded by other individuals who are passionate about technology and shaping the future with their own hands.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/mkrisnov.jpg" alt="Michael Kirsanov">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Michael Kirsanov</div>
+                            <div class="mt-1 text-gray-500">lofilabs.xyz</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 5 (Duplicate) -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Having Craft the Future part of our major event was fantastic because people got to experience AI art for the first time.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/jjones.jpg" alt="Jamar Jones">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Jamar Jones</div>
+                            <div class="mt-1 text-gray-500">Foureva Media</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <!-- Testimonial 6 (Duplicate) -->
+                    <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
+                      <figure class="flex flex-col justify-between h-full">
+                        <blockquote class="text-lg leading-8 text-gray-900">
+                          <p>“Being in a creative mindset can get rough - even when we love it. Having a sense of community saves your sanity.”</p>
+                        </blockquote>
+                        <figcaption class="mt-10 flex items-center gap-x-6">
+                          <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/mlyle.jpg" alt="Mitchelle Lyle">
+                          <div class="text-base">
+                            <div class="font-semibold text-gray-900">Mitchelle Lyle</div>
+                            <div class="mt-1 text-gray-500">Hydroponics STEM Program</div>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
                   </div>
-                  <!-- Testimonial 3 -->
-                  <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
-                    <figure class="flex flex-col justify-between h-full">
-                      <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>“Keep creating and lean in to your tribe of community supporters.”</p>
-                      </blockquote>
-                      <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/donna_lewis.jpg" alt="Donna 'Renee' Lewis">
-                        <div class="text-base">
-                          <div class="font-semibold text-gray-900">Donna "Renee" Lewis</div>
-                          <div class="mt-1 text-gray-500">Genisx Inc</div>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <!-- Testimonial 4 -->
-                  <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
-                    <figure class="flex flex-col justify-between h-full">
-                      <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>“It's incredibly refreshing to be surrounded by other individuals who are passionate about technology and shaping the future with their own hands.”</p>
-                      </blockquote>
-                      <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/michael_kirsanov.jpg" alt="Michael Kirsanov">
-                        <div class="text-base">
-                          <div class="font-semibold text-gray-900">Michael Kirsanov</div>
-                          <div class="mt-1 text-gray-500">lofilabs.xyz</div>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <!-- Testimonial 5 -->
-                  <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
-                    <figure class="flex flex-col justify-between h-full">
-                      <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>“Having Craft the Future part of our major event was fantastic because people got to experience AI art for the first time.”</p>
-                      </blockquote>
-                      <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/jamar_jones.jpg" alt="Jamar Jones">
-                        <div class="text-base">
-                          <div class="font-semibold text-gray-900">Jamar Jones</div>
-                          <div class="mt-1 text-gray-500">Foureva Media</div>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <!-- Testimonial 6 -->
-                  <div class="testimonial-card flex-none w-full sm:w-1/2 lg:w-1/3 bg-gray-100 p-6 rounded-lg">
-                    <figure class="flex flex-col justify-between h-full">
-                      <blockquote class="text-lg leading-8 text-gray-900">
-                        <p>“Being in a creative mindset can get rough - even when we love it. Having a sense of community saves your sanity.”</p>
-                      </blockquote>
-                      <figcaption class="mt-10 flex items-center gap-x-6">
-                        <img class="h-14 w-14 rounded-full bg-gray-50" src="assets/mitchelle_lyle.jpg" alt="Mitchelle Lyle">
-                        <div class="text-base">
-                          <div class="font-semibold text-gray-900">Mitchelle Lyle</div>
-                          <div class="mt-1 text-gray-500">Hydroponics STEM Program</div>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <!-- Duplicate testimonials for seamless scrolling -->
-                  <!-- You can duplicate the testimonials or adjust the animation accordingly -->
-                  <!-- Testimonial 1 (Duplicate) -->
-                  <!-- [Repeat testimonials as needed] -->
                 </div>
               </div>
             </div>
@@ -401,6 +522,15 @@
         });
       }, 500);
     });
+
+    document.querySelectorAll('.animate-scroll-left, .animate-scroll-right').forEach(function(container) {
+  container.addEventListener('touchstart', function() {
+    container.style.animationPlayState = 'paused';
+  });
+  container.addEventListener('touchend', function() {
+    container.style.animationPlayState = 'running';
+  });
+});
   </script>
 </body>
 </html>
